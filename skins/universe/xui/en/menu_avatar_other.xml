@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- *NOTE: See also menu_attachment_other.xml -->
+<context_menu
+ layout="topleft"
+ name="Avatar Pie">
+    <menu_item_call
+     label="Просмотреть профиль"
+     name="Profile...">
+        <menu_item_call.on_click
+         function="ShowAgentProfile"
+         parameter="hit object" />
+    </menu_item_call>
+   <menu_item_call
+     enabled="false"
+     label="Добавить в друзья"
+     name="Add Friend">
+        <menu_item_call.on_click
+         function="Avatar.AddFriend" />
+        <menu_item_call.on_enable
+         function="Avatar.EnableAddFriend" />
+    </menu_item_call>
+    <menu_item_call
+     label="Личное сообщение"
+     name="Send IM...">
+        <menu_item_call.on_click
+         function="Avatar.SendIM" />
+    </menu_item_call>
+    <menu_item_call
+     label="Позвонить"
+     name="Call">
+        <menu_item_call.on_click
+         function="Avatar.Call" />
+        <menu_item_call.on_enable
+         function="Avatar.EnableCall" />
+    </menu_item_call>
+      <menu_item_call
+         label="Пригласить в группц"
+         name="Invite...">
+      <menu_item_call.on_click
+         function="Avatar.InviteToGroup" />
+      </menu_item_call>
+    <menu_item_call
+     label="Обновить текстуры"
+     name="Refresh">
+      <menu_item_call.on_click
+       function="Avatar.RefreshTex" />
+    </menu_item_call>
+
+   <menu_item_separator />
+    <menu_item_call
+     label="Derender"
+     name="Derender">
+        <menu_item_call.on_click 
+         function="Alchemy.Derender" />
+    </menu_item_call>
+     <menu_item_call
+     enabled="false"
+     label="Block"
+     name="Avatar Mute">
+        <menu_item_call.on_click
+         function="Avatar.Mute" />
+        <menu_item_call.on_enable
+         function="Avatar.EnableMute" />
+    </menu_item_call>
+    <menu_item_call
+     label="Report Abuse"
+     name="abuse">
+        <menu_item_call.on_click
+         function="Avatar.ReportAbuse" />
+    </menu_item_call>
+        <menu_item_call
+         label="Freeze"
+         name="Freeze...">
+            <menu_item_call.on_click
+             function="Avatar.Freeze" />
+            <menu_item_call.on_visible
+             function="Avatar.EnableFreezeEject"/>
+        </menu_item_call>
+        <menu_item_call
+         label="Eject"
+         name="estate_kick_btn">
+        </menu_item_call>
+        <menu_item_call
+         label="Debug Textures"
+         name="Debug...">
+            <menu_item_call.on_click
+             function="Avatar.Debug" />
+            <menu_item_call.on_visible
+             function="IsGodCustomerService"/>
+        </menu_item_call>
+    <menu_item_call
+		 label="Dump XML"
+         name="Dump XML">
+            <menu_item_call.on_click
+             function="Advanced.AppearanceToXML" />
+            <menu_item_call.on_visible
+             function="Advanced.EnableAppearanceToXML"/>
+    </menu_item_call>
+	    <menu_item_call
+         label="Zoom In"
+          name="Zoom In">
+        <menu_item_call.on_click
+           function="Tools.LookAtSelection"
+           parameter="zoom" />
+    </menu_item_call>
+   <menu_item_call    
+     label="Передать RL$"
+     name="Pay...">
+        <menu_item_call.on_click
+         function="PayObject" />       
+    </menu_item_call>
+
+   <menu_item_separator />
+    
+      <menu_item_check
+        name="Normal"
+        label="Normal Rendering">
+        <menu_item_check.on_check
+          function="Avatar.CheckImpostorMode"
+          parameter="0" />
+	    <menu_item_check.on_click
+	      function="Avatar.SetImpostorMode"
+	      parameter="0" />
+      </menu_item_check>
+      <menu_item_check
+        name="Always use impostor"
+        label="Always use impostor">
+        <menu_item_check.on_check
+          function="Avatar.CheckImpostorMode"
+          parameter="1" />
+	    <menu_item_check.on_click
+	      function="Avatar.SetImpostorMode"
+	      parameter="1" />
+      </menu_item_check>
+      <menu_item_check
+        name="Never use impostor"
+        label="Never use impostor">
+        <menu_item_check.on_check
+          function="Avatar.CheckImpostorMode"
+          parameter="2" />
+	    <menu_item_check.on_click
+	      function="Avatar.SetImpostorMode"
+	      parameter="2" />
+      </menu_item_check>
+
+  <menu_item_separator 
+    layout="topleft"  name="Impostor seperator"/>
+
+  <menu_item_call
+     enabled="false"
+     label="Block Particle Owner"
+     name="Mute Particle">
+    <menu_item_call.on_click
+     function="Particle.Mute" />
+    <menu_item_call.on_enable
+     function="EnableMuteParticle" />
+  </menu_item_call>
+    <menu_item_separator />
+    <menu
+     label="Tools"
+     name="Tools">
+    <menu_item_call
+     label="Копировать Имя"
+     name="Copy Name">
+        <menu_item_call.on_click
+        function="Avatar.CopyData"
+        parameter="copy_name" />
+    </menu_item_call>
+    <menu_item_call
+     label="Копировать RLURL"
+     name="Copy SLURL">
+        <menu_item_call.on_click
+        function="Avatar.CopyData"
+        parameter="copy_slurl" />
+    </menu_item_call>
+    <menu_item_call
+     label="Копировать ID"
+     name="Copy Key">
+        <menu_item_call.on_click
+	function="Avatar.CopyData"
+        parameter="copy_key" />		
+    </menu_item_call>
+    </menu>
+</context_menu>

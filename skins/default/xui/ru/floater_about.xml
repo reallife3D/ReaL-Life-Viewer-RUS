@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<floater name="floater_about" title="О [CAPITALIZED_APP_NAME]">
+	<tab_container name="about_tab">
+		<panel label="Данные" name="support_panel">
+			<button label="Копировать в буфер обмена" name="copy_btn"/>
+			<button label="Проверить наличие обновлений" name="update_btn"/>
+		</panel>
+		<panel label="Создатели" name="credits_panel">
+			<text name="linden_intro">Игра ReaL Life 3D разработана компанией ReaL Life 3D, 
+в написании открытого кода участвовали:</text>
+			<text_editor name="contrib_names">Псевдо-имя изменено при запуске</text_editor>
+		</panel>
+		<panel label="Лицензии" name="licenses_panel">
+			<text_editor name="licenses_editor">3
+		Это программное обеспечение содержит исходный код, предоставленный корпорацией NVIDIA.
+
+        Все права защищены.  Подробные сведения см. в файле licenses.txt.
+</text_editor>
+		</panel>
+	</tab_container>
+</floater>
